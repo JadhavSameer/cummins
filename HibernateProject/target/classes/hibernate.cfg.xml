@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/samdb?useSSL=false</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">manager@1990</property>
+
+        <!-- JDBC connection pool settings -->
+        <property name="connection.pool_size">5</property>
+
+        <!-- SQL dialect for MySQL -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- Mapping files -->
+        <!-- Add more mappings as needed -->
+
+    </session-factory>
+</hibernate-configuration>
